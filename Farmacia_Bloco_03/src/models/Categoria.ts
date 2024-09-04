@@ -1,9 +1,7 @@
-import Categoria from "./Categoria";
+﻿import Produto from "./Produto";
 
-export default interface Produto {
+export default interface Categoria {
     id: number;
     nome: string;
-    preco: number;
-    foto: string;
-    categoria: Categoria | null;
+    produto?: Produto | null;
 }

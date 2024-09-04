@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import Categoria from "../../../models/Categoria";
 import { listar } from "../../../services/Service";
-import CardCategorias from "../cardcategorias/CardCategorias";
+import CardCategorias from "../cardcategorias/Cardcategorias";
 import { DNA } from 'react-loader-spinner';
 
 function ListarCategorias() {

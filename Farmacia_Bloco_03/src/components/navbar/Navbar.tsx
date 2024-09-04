@@ -1,18 +1,14 @@
-import { User, ShoppingCart, MagnifyingGlass } from "@phosphor-icons/react"
-import { Link } from "react-router-dom"
+﻿import { User, ShoppingCart, MagnifyingGlass, FirstAidKit } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
 
     return (
-
-        <div className='flex justify-center bg-white py-4 w-full text-black'>
+        <div className='flex justify-center bg-red-600 py-4 w-full text-white'>
             <div className="flex justify-between text-lg container">
-                <Link to='/home'>
-                    <img
-                        src="https://ik.imagekit.io/vzr6ryejm/games/logolg.png?updatedAt=1705976699033"
-                        alt="Logo"
-                        className='w-60'
-                    />
+                <Link to='/home' className='flex items-center gap-2'>
+                    <FirstAidKit size={32} weight="bold" className='text-white' />
+                    <span className="text-xl font-bold">PharmaShop</span>
                 </Link>
 
                 <div className="relative flex flex-1 justify-center items-center w-30 text-black">
@@ -24,14 +20,14 @@ function Navbar() {
                             name="busca"
                             required
                         />
-                        <button type="submit" className="bg-teal-500 hover:bg-teal-900 dark:hover:bg-teal-700 dark:bg-teal-600 p-2.5 border border-teal-700 rounded-lg focus:ring-4 focus:ring-blue-300 dark:focus:ring-teal-800 w-9 h-9 font-medium text-sm text-white ms-2 focus:outline-none">
+                        <button type="submit" className="bg-red hover:bg-red-800 text-white hover:text-white p-2.5 border border-white rounded-lg focus:ring-4 focus:ring-white w-9 h-9 font-medium text-sm ms-2 focus:outline-none">
                             <MagnifyingGlass size={14} weight="bold" />
                         </button>
                     </form>
                 </div>
 
-                <div className='flex gap-4 py-4'>
-                    Produtos
+                <div className='flex gap-6 items-center'>
+                    <Link to='/produtos' className='hover:underline'>Produtos</Link>
                     <Link to='/categorias' className='hover:underline'>Categorias</Link>
                     <Link to='/cadcategoria' className='hover:underline'>Cadastrar Categoria</Link>
                     <User size={32} weight='bold' />
@@ -42,4 +38,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;
